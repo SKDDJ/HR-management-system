@@ -10,6 +10,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 100,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "fullName",
@@ -17,6 +19,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 150,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "email",
@@ -24,6 +28,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 100,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "phone",
@@ -31,6 +37,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 150,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "sectionName",
@@ -38,6 +46,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 150,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "employmentTitle",
@@ -45,6 +55,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 200,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "hireDate",
@@ -52,6 +64,8 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 100,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
   {
     field: "salary",
@@ -59,13 +73,15 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 100,
+    headerClassName: "header",
+    cellClassName: "cell",
   },
 ];
 
 export const Branches = () => {
   const { branches } = useContext(StaffContext);
   return (
-    <Box component="section" sx={{ height: "400px", width: "100%" }}>
+    <Box component="section" sx={{ height: "500px", width: "100%" }}>
       <DataGrid
         rows={branches}
         columns={columns}

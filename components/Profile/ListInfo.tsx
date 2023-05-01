@@ -14,13 +14,18 @@ export const ListInfo = () => {
   const {
     staff: { sectionName, employmentTitle, salary, hireDate, managerName },
   } = useContext(StaffContext);
+
   return (
     <List
       sx={{
-        px: 2,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "1rem",
         backgroundColor: "rgba(255, 255, 255, 0.08)",
         borderRadius: "20px",
         boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
+        padding: "1rem",
       }}
     >
       <ListItem>

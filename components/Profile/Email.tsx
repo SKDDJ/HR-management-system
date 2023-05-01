@@ -33,20 +33,31 @@ export const Email = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "rgba(255, 255, 255, 0.08)",
-        borderRadius: "20px",
-        boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
+        backgroundColor: "#F5F5F5",
+        borderRadius: "10px",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+        width: "50%",
+        margin: "auto",
+        padding: "20px",
       }}
     >
       <Typography
         component="h3"
-        sx={{ fontSize: "35px", fontWeight: "bolder" }}
+        sx={{ fontSize: "35px", fontWeight: "bolder", marginBottom: "20px" }}
       >
         E-mail
       </Typography>
       {!isEditing && (
         <>
-          <Button onClick={() => setIsEditing(true)}>Edit</Button>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            onClick={() => setIsEditing(true)}
+            sx={{ marginBottom: "10px" }}
+          >
+            Edit
+          </Button>
           <Typography component="p" sx={{ fontSize: "25px" }}>
             {email}
           </Typography>
@@ -54,9 +65,24 @@ export const Email = () => {
       )}
       {isEditing && (
         <>
-          <Box sx={{ display: "flex" }}>
-            <Button onClick={() => setIsEditing(false)}>Cancel</Button>
-            <Button onClick={handleSubmit(onSubmit)}>Save</Button>
+          <Box sx={{ display: "flex", marginBottom: "10px" }}>
+            <Button
+              variant="contained"
+              color="error"
+              size="small"
+              onClick={() => setIsEditing(false)}
+              sx={{ marginRight: "10px" }}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="contained"
+              color="success"
+              size="small"
+              onClick={handleSubmit(onSubmit)}
+            >
+              Save
+            </Button>
           </Box>
           <Box component="form">
             <TextField

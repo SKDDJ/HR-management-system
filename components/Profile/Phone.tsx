@@ -16,7 +16,7 @@ export const Phone = () => {
   const [isEditing, setIsEditing] = useState(false);
   const { register, handleSubmit } = useForm<UpdatePhoneInput>();
 
-  const onSubmit: SubmitHandler<UpdatePhoneInput> = async data => {
+  const onSubmit: SubmitHandler<UpdatePhoneInput> = async (data) => {
     setIsEditing(false);
     const { success, message } = await updateInfoHelper(data);
     if (!success) {
@@ -25,6 +25,7 @@ export const Phone = () => {
     }
     Router.reload();
   };
+
   return (
     <Box
       component="section"
@@ -36,17 +37,26 @@ export const Phone = () => {
         backgroundColor: "rgba(255, 255, 255, 0.08)",
         borderRadius: "20px",
         boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
+        width: "50%",
+        margin: "auto",
+        padding: "20px",
       }}
     >
       <Typography
         component="h3"
-        sx={{ fontSize: "35px", fontWeight: "bolder" }}
+        sx={{ fontSize: "35px", fontWeight: "bolder", marginBottom: "20px" }}
       >
         Phone
       </Typography>
       {!isEditing && (
         <>
-          <Button onClick={() => setIsEditing(true)}>Edit</Button>
+          <Button
+            variant="contained"
+            onClick={() => setIsEditing(true)}
+            sx={{ marginBottom: "20px" }}
+          >
+            Edit
+          </Button>
           <Typography component="p" sx={{ fontSize: "25px" }}>
             {phone}
           </Typography>
@@ -54,9 +64,17 @@ export const Phone = () => {
       )}
       {isEditing && (
         <>
-          <Box sx={{ display: "flex" }}>
-            <Button onClick={() => setIsEditing(false)}>Cancel</Button>
-            <Button onClick={handleSubmit(onSubmit)}>Save</Button>
+          <Box sx={{ display: "flex", marginBottom: "20px" }}>
+            <Button
+              variant="contained"
+              onClick={() => setIsEditing(false)}
+              sx={{ marginRight: "10px" }}
+            >
+              Cancel
+            </Button>
+            <Button variant="contained" onClick={handleSubmit(onSubmit)}>
+              Save
+            </Button>
           </Box>
           <Box component="form">
             <TextField

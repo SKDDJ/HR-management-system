@@ -24,32 +24,53 @@ export const Form = () => {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ mt: 1 }}>
+    <Box
+      component="form"
+      onSubmit={handleSubmit(onSubmit)}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
       <TextField
         type="text"
         label="Staff ID"
         {...register("staffId")}
         required
-        variant="standard"
+        variant="outlined"
         margin="normal"
         fullWidth
         autoComplete="id"
         autoFocus
+        sx={{ mb: 2 }}
       />
       <TextField
         type="password"
         label="Password"
         {...register("password")}
         required
-        variant="standard"
+        variant="outlined"
         margin="normal"
         fullWidth
         autoComplete="password"
+        sx={{ mb: 2 }}
       />
-      <Button type="submit" variant="contained" fullWidth sx={{ mt: 3, mb: 2 }}>
+      <Button
+        type="submit"
+        variant="contained"
+        fullWidth
+        sx={{ mb: 2, bgcolor: "#1976d2", color: "#fff" }}
+      >
         LOG IN
       </Button>
-      {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
+      {errorMessage && (
+        <Alert severity="error" sx={{ mb: 2 }}>
+          {errorMessage}
+        </Alert>
+      )}
     </Box>
   );
 };

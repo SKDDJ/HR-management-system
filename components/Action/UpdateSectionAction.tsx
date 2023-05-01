@@ -30,7 +30,7 @@ export const UpdateSectionAction = () => {
 
   return (
     <>
-      <Button variant="contained" onClick={openDialog}>
+      <Button variant="contained" color="primary" onClick={openDialog}>
         Alter section name
       </Button>
       {open && (
@@ -42,7 +42,7 @@ export const UpdateSectionAction = () => {
               label="Section ID"
               {...register("sectionId")}
               required
-              variant="standard"
+              variant="outlined"
               margin="normal"
               fullWidth
               autoComplete="section-id"
@@ -53,16 +53,16 @@ export const UpdateSectionAction = () => {
               label="Section Name"
               {...register("sectionName")}
               required
-              variant="standard"
+              variant="outlined"
               margin="normal"
               fullWidth
               autoComplete="section-name"
             />
-            {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
+            {errorMessage && <Alert severity="error" color="error">{errorMessage}</Alert>}
           </DialogContent>
           <DialogActions>
-            <Button onClick={closeDialog}>Cancel</Button>
-            <Button onClick={handleSubmit(onSubmit)}>OK</Button>
+            <Button color="secondary" onClick={closeDialog}>Cancel</Button>
+            <Button color="primary" onClick={handleSubmit(onSubmit)}>OK</Button>
           </DialogActions>
         </Dialog>
       )}

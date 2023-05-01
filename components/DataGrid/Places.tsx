@@ -4,40 +4,40 @@ import { HrContext } from "contexts/HrContext";
 import { useContext } from "react";
 
 const columns: GridColDef[] = [
-  {
-    field: "placeId",
-    headerName: "ID",
-    headerAlign: "center",
-    align: "center",
-    width: 150,
+{
+field: "placeId",
+headerName: "ID",
+headerAlign: "center",
+align: "center",
+width: 150,
+},
+{
+field: "street",
+headerName: "Street",
+headerAlign: "center",
+align: "center",
+width: 250,
+},
+{
+  field: "postalCode",
+  headerName: "Postal Code",
+  headerAlign: "center",
+  align: "center",
+  width: 150,
   },
   {
-    field: "street",
-    headerName: "Street",
-    headerAlign: "center",
-    align: "center",
-    width: 250,
+  field: "city",
+  headerName: "City",
+  headerAlign: "center",
+  align: "center",
+  width: 150,
   },
   {
-    field: "postalCode",
-    headerName: "Postal Code",
-    headerAlign: "center",
-    align: "center",
-    width: 150,
-  },
-  {
-    field: "city",
-    headerName: "City",
-    headerAlign: "center",
-    align: "center",
-    width: 150,
-  },
-  {
-    field: "province",
-    headerName: "Province",
-    headerAlign: "center",
-    align: "center",
-    width: 150,
+  field: "province",
+  headerName: "Province",
+  headerAlign: "center",
+  align: "center",
+  width: 150,
   },
   {
     field: "stateName",
@@ -45,26 +45,37 @@ const columns: GridColDef[] = [
     headerAlign: "center",
     align: "center",
     width: 200,
-  },
-  {
+    },
+    {
     field: "areaName",
     headerName: "Area",
     headerAlign: "center",
     align: "center",
     width: 100,
-  },
-];
+    },
+    ];
 
+    
 export const Places = () => {
   const { places } = useContext(HrContext);
   return (
-    <Box component="section" sx={{ height: "400px", width: "100%" }}>
+    <Box component="section" sx={{ height: "400px", width: "100%", bgcolor: "gray" }}>
       <DataGrid
         rows={places}
         columns={columns}
         getRowId={row => row.placeId}
         autoPageSize
+        components={{
+          header: {
+            cell: ({ field }) => (
+              <div style={{ fontSize: "1.2rem" }}>
+                {field === "placeId" ? "ID" : field}
+              </div>
+            ),
+          },
+        }}
       />
     </Box>
   );
 };
+

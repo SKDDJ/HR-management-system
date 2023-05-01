@@ -13,7 +13,7 @@ export const Login = () => {
         alignItems: "center",
       }}
     >
-      <Avatar sx={{ m: 1, bgcolor: "#9ac8e2" }}>
+      <Avatar sx={{ m: 1, bgcolor: "#2196f3" }}>
         <LockIcon />
       </Avatar>
       <Typography component="h1">Log In</Typography>

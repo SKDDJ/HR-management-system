@@ -12,9 +12,14 @@ export const Name = () => {
       component="section"
       sx={{
         py: 2,
-        backgroundColor: "rgba(255, 255, 255, 0.08)",
+        backgroundColor: "#F5F5F5",
         borderRadius: "20px",
         boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
       }}
     >
       <Typography

@@ -19,23 +19,20 @@ export const SalaryStatisticsAction = () => {
     {} as SalaryStatistics
   );
 
-  useEffect(
-    () => setStatistics(calcSalaryStatisticsHelper(branches)),
-    [branches]
-  );
+  useEffect(() => setStatistics(calcSalaryStatisticsHelper(branches)), [branches]);
 
   return (
     <>
-      <Button variant="contained" onClick={openDialog}>
+      <Button variant="outlined" onClick={openDialog} className="salary-statistics-button">
         Salary Statistics
       </Button>
       {open && (
         <Dialog open={open} onClose={closeDialog}>
           <DialogTitle>Salary Statistics</DialogTitle>
           <DialogContent>
-            <DialogContentText>Max: {maxSalary}</DialogContentText>
-            <DialogContentText>Min: {minSalary}</DialogContentText>
-            <DialogContentText>Average: {averageSalary}</DialogContentText>
+            <DialogContentText className="salary-statistics-text">Max: {maxSalary}</DialogContentText>
+            <DialogContentText className="salary-statistics-text">Min: {minSalary}</DialogContentText>
+            <DialogContentText className="salary-statistics-text">Average: {averageSalary}</DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={closeDialog}>OK</Button>

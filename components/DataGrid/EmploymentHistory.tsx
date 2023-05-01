@@ -6,28 +6,28 @@ import { useContext } from "react";
 const columns: GridColDef[] = [
   {
     field: "staffId",
-    headerName: "ID",
+    headerName: "Employee ID",
     headerAlign: "center",
     align: "center",
     width: 150,
   },
   {
     field: "fullName",
-    headerName: "Name",
+    headerName: "Employee Name",
     headerAlign: "center",
     align: "center",
     width: 150,
   },
   {
     field: "startDate",
-    headerName: "Start date",
+    headerName: "Start Date",
     headerAlign: "center",
     align: "center",
     width: 150,
   },
   {
     field: "endDate",
-    headerName: "End date",
+    headerName: "End Date",
     headerAlign: "center",
     align: "center",
     width: 150,
@@ -51,11 +51,11 @@ const columns: GridColDef[] = [
 export const EmploymentHistory = () => {
   const { employmentHistories } = useContext(HrContext);
   return (
-    <Box component="section" sx={{ height: "400px", width: "100%" }}>
+    <Box component="section" sx={{ height: "100%", width: "100%" }}>
       <DataGrid
         rows={employmentHistories}
         columns={columns}
-        getRowId={row => row.staffId + row.employmentId}
+        getRowId={(row) => row.staffId + row.employmentId}
         autoPageSize
       />
     </Box>

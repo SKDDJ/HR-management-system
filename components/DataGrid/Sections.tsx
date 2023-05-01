@@ -58,13 +58,13 @@ const columns: GridColDef[] = [
 export const Sections = () => {
   const { sections } = useContext(HrContext);
   return (
-    <Box component="section" sx={{ height: "400px", width: "100%" }}>
-      <DataGrid
-        rows={sections}
-        columns={columns}
-        getRowId={row => row.sectionId}
-        autoPageSize
-      />
-    </Box>
+    <Box component="section" sx={{ height: "500px", width: "100%", backgroundColor: "gray" }}>
+    <DataGrid
+      rows={sections}
+      columns={columns}
+      getRowId={row => row.sectionId}
+      autoPageSize
+    />
+  </Box>
   );
 };
