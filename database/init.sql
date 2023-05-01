@@ -1,13 +1,13 @@
 -- Create user.
-CREATE USER caiyuwang PASSWORD 'caiyuwang@15432';
+CREATE USER shiym PASSWORD 'shiym';
 
 -- Create tablespace.
 CREATE TABLESPACE human_resource_space RELATIVE LOCATION 'tablespace/human_resource_space';
 
-GRANT CREATE ON TABLESPACE human_resource_space TO caiyuwang;
+GRANT CREATE ON TABLESPACE human_resource_space TO shiym;
 
 -- Create database.
-CREATE DATABASE human_resource WITH TABLESPACE = human_resource_space OWNER caiyuwang;
+CREATE DATABASE human_resource WITH TABLESPACE = human_resource_space OWNER shiym;
 
 -- -- Create schema.
 -- CREATE SCHEMA caiyuwang AUTHORIZATION caiyuwang;
