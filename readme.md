@@ -31,5 +31,5 @@ The application is built using Node.js and Express.js on the backend, and React.
 // 5. Push your changes to the remote repository: `git push origin my-feature-branch`
 // 6. Create a pull request on GitHub and wait for code review and approval before merging your changes into the master branch.
 
-This repo is forked by mrcaidev's repo, and change some code, thank you for your contribution!
+This repo is forked by mrcaidev's repo, and change some code(like config, database, style...), thank you for your contribution!
 
