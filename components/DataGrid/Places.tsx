@@ -56,26 +56,25 @@ width: 250,
     ];
 
     
-export const Places = () => {
-  const { places } = useContext(HrContext);
-  return (
-    <Box component="section" sx={{ height: "400px", width: "100%", bgcolor: "gray" }}>
-      <DataGrid
-        rows={places}
-        columns={columns}
-        getRowId={row => row.placeId}
-        autoPageSize
-        components={{
-          header: {
-            cell: ({ field }) => (
-              <div style={{ fontSize: "1.2rem" }}>
-                {field === "placeId" ? "ID" : field}
-              </div>
-            ),
-          },
-        }}
-      />
-    </Box>
-  );
-};
-
+    export const Places = () => {
+      const { places } = useContext(HrContext);
+      return (
+        <Box component="section" sx={{ height: "400px", width: "100%", bgcolor: "gray" }}>
+          <DataGrid
+            rows={places}
+            columns={columns}
+            getRowId={row => row.placeId}
+            autoPageSize
+            components={{
+              Header: ({ field }) => {
+                return (
+                  <div style={{ fontSize: "1.2rem" }}>
+                    {field === "placeId" ? "ID" : field}
+                  </div>
+                );
+              },
+            }}
+          />
+        </Box>
+      );
+    };
