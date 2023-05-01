@@ -1,21 +1,21 @@
--- Create table.
+
 DROP TABLE IF EXISTS staffs;
 
 CREATE TABLE staffs (
-  staff_id NUMBER,
-  first_name VARCHAR2(40),
-  last_name VARCHAR2(12),
-  email VARCHAR2(30),
-  phone_number VARCHAR2(25),
+  staff_id INTEGER,
+  first_name VARCHAR(40),
+  last_name VARCHAR(12),
+  email VARCHAR(30),
+  phone_number VARCHAR(25),
   hire_date DATE,
-  employment_id VARCHAR2(10),
-  salary NUMBER,
-  commission_pct NUMBER,
-  manager_id NUMBER,
-  section_id NUMBER
+  employment_id VARCHAR(10),
+  salary INTEGER,
+  commission_pct INTEGER,
+  manager_id INTEGER,
+  section_id INTEGER
 );
 
--- Insert values.
+
 INSERT INTO
   staffs (
     staff_id,

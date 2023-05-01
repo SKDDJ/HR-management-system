@@ -2,13 +2,13 @@
 ALTER TABLE
   staffs
 ADD
-  COLUMN password VARCHAR2(20);
+  COLUMN password VARCHAR(20);
 
 -- Set default password to staff id.
 UPDATE staffs SET password = staff_id;
 
 -- Add role column.
-ALTER TABLE staffs ADD COLUMN role VARCHAR2(10);
+ALTER TABLE staffs ADD COLUMN role VARCHAR(10);
 
 -- Set role of each staff.
 UPDATE staffs SET role = 'manager' WHERE staff_id IN (

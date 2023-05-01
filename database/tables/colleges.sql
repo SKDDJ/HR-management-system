@@ -1,12 +1,11 @@
--- Create table.
+
 DROP TABLE IF EXISTS colleges;
 
 CREATE TABLE colleges (
-  college_id NUMBER,
-  college_name VARCHAR2(40)
+  college_id INTEGER,
+  college_name VARCHAR(40)
 );
 
--- Insert values.
 INSERT INTO
   colleges (college_id, college_name)
 VALUES

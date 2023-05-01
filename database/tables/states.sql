@@ -1,13 +1,13 @@
--- Create table.
+
 DROP TABLE IF EXISTS states;
 
 CREATE TABLE states (
   state_id CHAR(2),
-  state_name VARCHAR2(40),
-  area_id NUMBER
+  state_name VARCHAR(40),
+  area_id INTEGER
 );
 
--- Insert values.
+
 INSERT INTO
   states (state_id, state_name, area_id)
 VALUES

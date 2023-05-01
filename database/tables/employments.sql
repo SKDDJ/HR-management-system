@@ -1,14 +1,14 @@
--- Create table.
+
 DROP TABLE IF EXISTS employments;
 
 CREATE TABLE employments (
-  employment_id VARCHAR2(10),
-  employment_title VARCHAR2(35),
-  min_salary NUMBER,
-  max_salary NUMBER
+  employment_id VARCHAR(10),
+  employment_title VARCHAR(35),
+  min_salary INTEGER,
+  max_salary INTEGER
 );
 
--- Insert values.
+
 INSERT INTO
   employments (
     employment_id,

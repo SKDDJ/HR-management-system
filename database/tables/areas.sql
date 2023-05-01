@@ -1,9 +1,8 @@
--- Create table.
+
 DROP TABLE IF EXISTS areas;
 
-CREATE TABLE areas (area_id NUMBER, area_name VARCHAR2(25));
+CREATE TABLE areas (area_id INTEGER, area_name VARCHAR(25));
 
--- Insert values.
 INSERT INTO
   areas (area_id, area_name)
 VALUES

@@ -1,15 +1,14 @@
--- Create table.
 DROP TABLE IF EXISTS employment_history;
 
 CREATE TABLE employment_history (
-  staff_id NUMBER,
+  staff_id INTEGER,
   start_date DATE,
   end_date DATE,
-  employment_id VARCHAR2(10),
-  section_id NUMBER(4)
+  employment_id VARCHAR(10),
+  section_id INTEGER
 );
 
--- Insert values.
+
 INSERT INTO
   employment_history (
     staff_id,

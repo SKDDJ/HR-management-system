@@ -1,14 +1,14 @@
--- Create table.
+
 DROP TABLE IF EXISTS sections;
 
 CREATE TABLE sections (
-  section_id NUMBER,
-  section_name VARCHAR2(30),
-  manager_id NUMBER,
-  place_id NUMBER
+  section_id INTEGER,
+  section_name VARCHAR(30),
+  manager_id INTEGER,
+  place_id INTEGER
 );
 
--- Insert values.
+
 INSERT INTO
   sections(section_id, section_name, manager_id, place_id)
 VALUES

@@ -1,16 +1,16 @@
--- Create table.
+
 DROP TABLE IF EXISTS places;
 
 CREATE TABLE places (
-  place_id NUMBER,
-  street_address VARCHAR2(40),
-  postal_code VARCHAR2(12),
-  city VARCHAR2(30),
-  state_province VARCHAR2(25),
+  place_id INTEGER,
+  street_address VARCHAR(40),
+  postal_code VARCHAR(12),
+  city VARCHAR(30),
+  state_province VARCHAR(25),
   state_id CHAR(10)
 );
 
--- Insert values.
+
 INSERT INTO
   places (
     place_id,
