@@ -613,11 +613,11 @@ INSERT INTO
 VALUES
   (
     999,
-    'Yuwang',
-    'Cai',
-    'YUWANG',
-    '18962388966',
-    to_date('28-03-2022', 'dd-mm-yyyy'),
+    'Yiming',
+    'Shi',
+    'YIMING',
+    '114.514.1919',
+    to_date('1-05-2023', 'dd-mm-yyyy'),
     'HR_REP',
     10000.00,
     null,
